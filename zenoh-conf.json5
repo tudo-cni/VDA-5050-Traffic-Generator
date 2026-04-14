@@ -1,0 +1,11 @@
+{
+    transport: {
+        link: {
+            tls: {
+                root_ca_certificate: "/certs/rootCA.pem",
+                listen_private_key: "/certs/localhost.key",
+                listen_certificate: "/certs/localhost.crt"
+            }
+        }
+    },
+}

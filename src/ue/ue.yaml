@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: Copyright (C) Lars Toenning <dev at ltoenning dot de>
+# SPDX-License-Identifier: GPL-2.0
+
+socket_uri: "ipc:///tmp/zmq_ue_0"
+output_path_received: output/manual_ue_0.csv
+output_path_throughput: output/throughput_ue.csv
+high_frequency: true # if VDA/teleop or high frequency scenario should be used
+
+mqtt:
+  hostname: "10.53.1.3"
+
+zenoh:
+  config_path_vda: src/ue/zenoh_config_vda.json
+  config_path_teleop: src/ue/zenoh_config_teleop.json
+  predeclare_publisher: true

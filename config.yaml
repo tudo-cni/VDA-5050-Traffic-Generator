@@ -1,0 +1,41 @@
+# SPDX-FileCopyrightText: Copyright (C) Lars Toenning <dev at ltoenning dot de>
+# SPDX-License-Identifier: MIT
+
+scenario: vda5050
+length_s: 60
+seed: 1
+
+vda5050:
+  manufacturer: manufacturer
+  serial_number: SN
+  visualization_period_ms: 100
+  send_connection_after_ms: 1000
+  send_state_after_ms: 5000
+  send_factsheet_request_after_ms: 6000
+  send_order_after_ms: 8000
+  start_visualization_after_ms: 1200
+  factsheet_response_time_ms: 200
+  send_order_continuation_ms: 2000
+  send_state_after_order_ms: 100
+  idle_state_interval_ms: 5000
+  order_finish_step_ms: 1000
+  next_order_after_finish_ms: 3000
+  order_len_min: 4
+  order_len_max: 20
+
+
+  teleop:
+    start_s: 20
+    stop_s: 40
+    control_command_period_ms: 50
+    request_teleoperation_capabilities_after_ms: 6500
+    send_teleoperation_capability_after_request_ms: 200
+    teleoperation_state_after_toggle_teleop_ms: 100
+    state_after_toggle_teleop_ms: 150
+    restart_order_simulation_after_teleoperation_stop_ms: 5000
+    control_stream_start_after_teleop_state_ms: 100
+
+high_frequency:
+  sensor_data_period_ms: 10
+  sensor_data_size_bytes: 100
+  start_stream_after_ms: 2000

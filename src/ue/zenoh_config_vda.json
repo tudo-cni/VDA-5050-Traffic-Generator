@@ -1,0 +1,23 @@
+{
+    "mode": "client",
+    "scouting": {
+        "multicast": {
+            "enabled": false
+        }
+    },
+    "connect": {
+        "endpoints": ["tcp/10.53.1.3:8088"]
+    },
+    "listen": {
+        "endpoints": ["tcp/10.45.1.2:7447"]
+    },
+    "transport": {
+        "link": {
+            "tls": {
+                "root_ca_certificate": "<REPLACE WITH PATH TO ROOT CA>",
+                "listen_private_key": "<REPLACE WITH PATH TO PRIVATE KEY>",
+                "listen_certificate": "<REPLACE WITH PATH TO CRT>"
+            }
+        }
+    }
+}

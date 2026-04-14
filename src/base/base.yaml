@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: Copyright (C) Lars Toenning <dev at ltoenning dot de>
+# SPDX-License-Identifier: GPL-2.0
+
+socket_uri: "ipc:///tmp/zmq_base"
+output_path_received: output/base.csv
+output_path_throughput: output/throughput_base.csv
+
+mqtt:
+  hostname: "10.53.1.3"
+
+zenoh:
+  config_path: src/base/zenoh_config.json
+  predeclare_publisher: true

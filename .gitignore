@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: Copyright (C) Lars Toenning <dev at ltoenning dot de>
+# SPDX-License-Identifier: GPL-2.0
+
+.venv
+build
+output/*/raw/
+!output/configs/.gitkeep
+*.png
+certs
+*.pdf
+__pycache__
+CMakeUserPresets.json
+
+
+.ruff_cache/

@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+authors:
+  - family-names: "Tönning"
+    given-names: "L."
+title: "VDA 5050 Traffic Generator"
+abstract: "Traffic generator for AGV (Automated Guided Vehicle) scenarios in intralogistics utilizing the VDA 5050 protocol. The traffic generator can be used to analyze the network load and behavior."
+date-released: 2026-04
+preferred-citation:
+  type: conference-paper
+  authors:
+    - family-names: "Wagner"
+      given-names: "Niklas A."
+    - family-names: "Tönning"
+      given-names: "Lars"
+    - family-names: "Lünsch"
+      given-names: "Dennis"
+    - family-names: "Jost"
+      given-names: "Jana"
+    - family-names: "Wietfeld"
+      given-names: "Christian"
+    - family-names: "Detzner"
+      given-names: "Peter"
+  title: "Teleoperating Mobile Robots via VDA 5050 – A First Middleware Evaluation within Open Industrial Networks"
+  collection-title: "IEEE International Conference on Factory Communication Systems (WFCS)"
+  month: 4
+  year: 2026

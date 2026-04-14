@@ -1,0 +1,114 @@
+# SPDX-FileCopyrightText: Copyright (C) Lars Toenning <dev at ltoenning dot de>
+# SPDX-License-Identifier: MIT
+
+services:
+  media_mtx:
+    image: bluenviron/mediamtx:latest
+    networks:
+      ran:
+        ipv4_address: 10.53.1.4
+
+
+  mqtt:
+    image: eclipse-mosquitto:2.0.22
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+    cap_add: # required to set netem
+      - NET_ADMIN
+    networks:
+      ran:
+        ipv4_address: 10.53.1.3
+
+  zenoh_udp:
+    image: eclipse/zenoh:1.4.0-55-gdd80eea25
+    restart: unless-stopped
+    ports:
+      - 7447:7447
+      - 8000:8000
+    environment:
+      - RUST_LOG=debug
+    volumes:
+      - ./zenoh-conf.json5:/config.json5
+      - ./certs:/certs:ro
+    stop_grace_period: 2s
+    command:
+      - "--listen"
+      - "udp/10.53.1.3:8088"
+      - "--config"
+      - "/config.json5"
+    cap_add: # required to set netem
+            - NET_ADMIN
+    networks:
+      ran:
+        ipv4_address: 10.53.1.3
+
+  zenoh_tcp:
+    image: eclipse/zenoh:1.4.0-55-gdd80eea25
+    restart: unless-stopped
+    ports:
+      - 7447:7447
+      - 8000:8000
+    environment:
+      - RUST_LOG=debug
+    volumes:
+      - ./zenoh-conf.json5:/config.json5
+      - ./certs:/certs:ro
+    stop_grace_period: 2s
+    command:
+      - "--listen"
+      - "tcp/10.53.1.3:8088"
+      - "--config"
+      - "/config.json5"
+    cap_add: # required to set netem
+            - NET_ADMIN
+    networks:
+      ran:
+        ipv4_address: 10.53.1.3
+
+  zenoh_quic:
+    image: eclipse/zenoh:1.4.0-55-gdd80eea25
+    restart: unless-stopped
+    ports:
+      - 7447:7447
+      - 8000:8000
+    environment:
+      - RUST_LOG=debug
+    volumes:
+      - ./zenoh-conf.json5:/config.json5
+      - ./certs:/certs:ro
+    stop_grace_period: 2s
+    command:
+      - "--listen"
+      - "quic/10.53.1.3:8088"
+      - "--config"
+      - "/config.json5"
+    cap_add: # required to set netem
+            - NET_ADMIN
+    networks:
+      ran:
+        ipv4_address: 10.53.1.3
+
+  zenoh_local:
+    image: eclipse/zenoh:1.4.0-55-gdd80eea25
+    restart: unless-stopped
+    ports:
+      - 7447:7447
+      - 8000:8000
+    environment:
+      - RUST_LOG=debug
+    volumes:
+      - ./zenoh-conf.json5:/config.json5
+      - ./certs:/certs:ro
+    stop_grace_period: 2s
+    command:
+      - "--listen"
+      - "tcp/0.0.0.0:7447"
+      - "--config"
+      - "/config.json5"
+    cap_add: # required to set netem
+            - NET_ADMIN
+
+networks:
+  ran:
+    external: true # from srsRAN 5GC docker file
+    name: docker_ran
