@@ -1,0 +1,32 @@
+version = 1
+
+[[annotations]]
+path = ".vscode/launch.json"
+SPDX-FileCopyrightText = "Copyright (C) Lars Toenning <dev at ltoenning dot de>"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = "zenoh-conf.json5"
+SPDX-FileCopyrightText = "Copyright (C) Lars Toenning <dev at ltoenning dot de>"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = "src/base/zenoh_config.json"
+SPDX-FileCopyrightText = "Copyright (C) Lars Toenning <dev at ltoenning dot de>"
+SPDX-License-Identifier = "CC0-1.0"
+
+
+[[annotations]]
+path = "src/ue/zenoh_config_teleop.json"
+SPDX-FileCopyrightText = "Copyright (C) Lars Toenning <dev at ltoenning dot de>"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = "src/ue/zenoh_config_vda.json"
+SPDX-FileCopyrightText = "Copyright (C) Lars Toenning <dev at ltoenning dot de>"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = "**/*.csv"
+SPDX-FileCopyrightText = "Copyright (C) Lars Toenning <dev at ltoenning dot de>"
+SPDX-License-Identifier = "CC0-1.0"

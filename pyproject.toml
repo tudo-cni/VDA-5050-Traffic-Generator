@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Copyright (C) Lars Toenning <dev at ltoenning dot de>
+# SPDX-License-Identifier: CC0-1.0
+
 [tool.ruff]
 
 # Same as Black.

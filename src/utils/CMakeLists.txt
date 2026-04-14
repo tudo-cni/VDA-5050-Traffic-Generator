@@ -1,5 +1,5 @@
 # SPDX-FileCopyrightText: Copyright (C) Lars Toenning <dev at ltoenning dot de>
-# SPDX-License-Identifier: GPL-2.0
+# SPDX-License-Identifier: GPL-2.0-only
 
 add_library(Utils command.h command.cpp main_loop.cpp)
 target_link_libraries(Utils zmq msgpack-cxx yaml-cpp PkgConfig::gstreamer PkgConfig::gstreamer-sdp PkgConfig::gstreamer-app PkgConfig::gstreamer-video)

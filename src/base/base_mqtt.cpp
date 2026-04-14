@@ -1,5 +1,5 @@
 // SPDX-FileCopyrightText: Copyright (C) Lars Toenning <dev at ltoenning dot de>
-// SPDX-License-Identifier: GPL-2.0
+// SPDX-License-Identifier: GPL-2.0-only
 
 #include "mqtt/mqtt_client.h"
 #include "utils/config_loader.h"
